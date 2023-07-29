@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Matching Game</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body onload="initBoard()">
+
+    <!-- Controls -->
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col-auto">
+                    <label for="boardSizeSelect" class="">Size</label>
+                    <select class="form-select" id="boardSizeSelect" onchange="initBoard()">
+                        <option>4</option>
+                        <option>8</option>
+                        <option>12</option>
+                        <option>16</option>
+                        <option>20</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <label for="themeSelect" class="">Theme</label>
+                    <select class="form-select" id="themeSelect" onchange="initBoard()">
+                        <option>Animals</option>
+                        <option>Shapes</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <label for="movesCount" class="">Moves</label>
+                    <input class="form-control" type="text" maxlength="4" size=4 id="movesCount" readonly>
+                    </input>
+                </div>
+                <div class="col-auto">
+                    <button type="button" onclick="initBoard()" class="button btn-info">Reset</button>
+                    </input>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Board -->
+    <div id="board-container" class="container">
+        <div id="board"></div>
+    </div>
+
+    <div id="footer" class="footer">
+        <a id="attribution" target="_blank" href=""></a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./assets/js/gameplay.js"></script>
+    <script src="./assets/js/shapes.js"></script>
+    <script src="./assets/js/animals.js"></script>
+</body>
+
+</html>
